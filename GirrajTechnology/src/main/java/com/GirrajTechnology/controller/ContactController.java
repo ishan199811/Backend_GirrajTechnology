@@ -18,7 +18,7 @@ import com.GirrajTechnology.service.ContactService;
 
 
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://girrajtechnology.com") // Add your deployed domain
 @RestController
 @RequestMapping("/api")
 public class ContactController {

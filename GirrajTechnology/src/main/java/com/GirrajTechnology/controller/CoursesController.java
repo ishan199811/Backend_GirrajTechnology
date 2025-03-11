@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.GirrajTechnology.model.Courses;
 import com.GirrajTechnology.service.CoursesService;
 
-@CrossOrigin(origins = "http://www.girrajtechnology.com")
+@CrossOrigin(origins = "https://girrajtechnology.com") // Add your deployed domain
 @RestController
 @RequestMapping("/api")
 public class CoursesController {
