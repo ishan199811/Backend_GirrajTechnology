@@ -39,6 +39,12 @@ public class Contact {
 		this.contactId = contactId;
 	}
 	
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
 	public String getEmail() {
 		return email;
 	}
