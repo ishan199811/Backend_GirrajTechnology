@@ -14,10 +14,12 @@ public class WebConfig implements WebMvcConfigurer {
 	            @Override
 	            public void addCorsMappings(CorsRegistry registry) {
 	                registry.addMapping("/**")
-	                        .allowedOrigins("https://girrajtechnology.com") // Add your Netlify domain
+	                .allowedOrigins("http://localhost:3000") // Add your Netlify domain
 	                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 	                        .allowCredentials(true);
 	            }
 	        };
 	    }
 	}
+//.allowedOrigins("http://localhost:3000") // Add your Netlify domain
+//.allowedOrigins("https://girrajtechnology.com") // Add your Netlify domain
