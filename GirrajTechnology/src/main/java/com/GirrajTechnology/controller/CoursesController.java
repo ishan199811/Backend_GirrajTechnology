@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.GirrajTechnology.model.Courses;
 import com.GirrajTechnology.service.CoursesService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://girrajtechnology.com")
 @RestController
 @RequestMapping("/api")
 public class CoursesController {
