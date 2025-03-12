@@ -1,9 +1,13 @@
-FROM openjsk : 21
-WORKDIR /app
+FROM ubuntu:latest
 
-COPY target/jar_file_name directory_of_jarfile
+# Install dependencies
+RUN apt update && apt install -y curl wget 
 
-Expose 8080
+# Install Ollama
+RUN curl -fsSL https://ollama.com/install.sh | sh
 
-ENTRYPOINT ["java , "-jar" , "jar_file_name"]
+# Expose Ollama API port
+EXPOSE 11434
 
+# Start Ollama server
+CMD ["ollama", "serve"]
