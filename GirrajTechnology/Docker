@@ -1,0 +1,11 @@
+# Use the official Ollama image
+FROM ollama/ollama:latest
+
+# Expose Ollama on port 11434
+EXPOSE 11434
+
+# Download the Mistral model
+RUN ollama pull mistral
+
+# Start Ollama on container startup
+CMD ["ollama", "serve"]
