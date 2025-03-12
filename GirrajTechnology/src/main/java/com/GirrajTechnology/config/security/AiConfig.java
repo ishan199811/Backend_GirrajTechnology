@@ -11,7 +11,7 @@ public class AiConfig {
 
 	@Bean
     public OllamaApi ollamaApi() {
-        return new OllamaApi("http://0.0.0.0:11434/"); // Ensure Ollama is running here
+        return new OllamaApi("https://ollama-production-c6ff.up.railway.app/"); // Ensure Ollama is running here
     }
 
     @Bean
