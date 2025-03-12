@@ -1,11 +1,11 @@
-# Use the official Ollama image
-FROM ollama/ollama:latest
+# Use the Ollama base image
+FROM ollama/ollama
 
-# Expose Ollama on port 11434
-EXPOSE 11434
-
-# Download the Mistral model
+# Pull Mistral model during build to avoid runtime downloads
 RUN ollama pull mistral
 
-# Start Ollama on container startup
+# Expose the API port
+EXPOSE 11434
+
+# Start Ollama server
 CMD ["ollama", "serve"]
