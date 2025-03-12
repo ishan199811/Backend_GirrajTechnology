@@ -1,0 +1,11 @@
+# Use the Ollama base image
+FROM ollama/ollama
+
+# Pull Mistral model during build to avoid runtime downloads
+RUN ollama pull mistral
+
+# Expose the API port
+EXPOSE 11434
+
+# Start Ollama server
+CMD ["ollama", "serve"]
