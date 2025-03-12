@@ -1,5 +1,7 @@
 package com.GirrajTechnology.config.security;
 
+import org.springframework.ai.ollama.OllamaChatClient;
+import org.springframework.ai.ollama.api.OllamaApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -60,5 +62,15 @@ public class SpringSecurity {
         auth
             .userDetailsService(userDetailsService)
             .passwordEncoder(passwordEncoder());
+    }
+    
+    @Bean
+    public OllamaApi ollamaApi() {
+        return new OllamaApi("https://ollama-production-c6ff.up.railway.app/"); // Ensure Ollama is running here
+    }
+
+    @Bean
+    public OllamaChatClient ollamaChatClient(OllamaApi ollamaApi) {
+        return new OllamaChatClient(ollamaApi);
     }
 }
