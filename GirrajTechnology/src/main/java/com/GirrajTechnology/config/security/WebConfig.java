@@ -8,17 +8,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-	  @Bean
+	 @Bean
 	    public WebMvcConfigurer corsConfigurer() {
 	        return new WebMvcConfigurer() {
 	            @Override
 	            public void addCorsMappings(CorsRegistry registry) {
-	                registry.addMapping("/**")  // Applies to all endpoints
-	                        .allowedOriginPatterns("*") // ✅ Allows all origins safely
-	                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
-	                        .allowedOrigins("*") // Add your Netlify domain
+	                registry.addMapping("/**")
+	                        .allowedOriginPatterns("*")
+	                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 	                        .allowedHeaders("*")
-	                        .allowCredentials(true); // Allows cookies and Authorization headers
+	                        .allowCredentials(true);
 	            }
 	        };
 	    }
