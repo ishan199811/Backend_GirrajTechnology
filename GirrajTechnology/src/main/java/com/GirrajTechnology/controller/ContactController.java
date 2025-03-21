@@ -18,7 +18,8 @@ import com.GirrajTechnology.service.ContactService;
 
 
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")  // Apply CORS to this controller
+
 @RestController
 @RequestMapping("/api")
 public class ContactController {
