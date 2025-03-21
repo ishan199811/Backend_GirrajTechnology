@@ -17,7 +17,8 @@ import com.GirrajTechnology.service.serviceImpl.LoginService;
 
 import jakarta.validation.Valid;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")  // Apply CORS to this controller
+
 @RestController
 @RequestMapping("/api")
 public class UserController {

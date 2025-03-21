@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.GirrajTechnology.service.SubTopicService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")  // Apply CORS to this controller
+
 @RestController
 @RequestMapping("/api")
 public class SubTopicController {

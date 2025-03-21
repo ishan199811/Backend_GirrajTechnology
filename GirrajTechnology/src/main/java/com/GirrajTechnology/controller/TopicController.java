@@ -16,7 +16,8 @@ import com.GirrajTechnology.model.Courses;
 import com.GirrajTechnology.model.Topic;
 import com.GirrajTechnology.service.TopicService;
 
-@CrossOrigin(origins = "https://girrajtechnology.com") // Add your deployed domain
+@CrossOrigin(origins = "*")  // Apply CORS to this controller
+// Add your deployed domain
 @RestController
 @RequestMapping("/api")
 public class TopicController {

@@ -19,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.GirrajTechnology.model.Courses;
 import com.GirrajTechnology.service.CoursesService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")  // Apply CORS to this controller
+
 @RestController
 @RequestMapping("/api")
 public class CoursesController {
