@@ -16,6 +16,7 @@ public class WebConfig implements WebMvcConfigurer {
 	                registry.addMapping("/**")  // Applies to all endpoints
 	                        .allowedOriginPatterns("*") // ✅ Allows all origins safely
 	                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
+	                        .allowedOrigins("*") // Add your Netlify domain
 	                        .allowedHeaders("*")
 	                        .allowCredentials(true); // Allows cookies and Authorization headers
 	            }
