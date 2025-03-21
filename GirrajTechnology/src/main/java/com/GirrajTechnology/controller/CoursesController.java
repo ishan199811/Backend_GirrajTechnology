@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.GirrajTechnology.model.Courses;
 import com.GirrajTechnology.service.CoursesService;
 
-@CrossOrigin(origins = "*")  // Apply CORS to this controller
+@CrossOrigin(origins = "https://girrajtechnology.com")  // Apply CORS to this controller
 
 @RestController
 @RequestMapping("/api")

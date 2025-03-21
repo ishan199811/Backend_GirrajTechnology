@@ -18,7 +18,7 @@ import com.GirrajTechnology.service.ContactService;
 
 
 
-@CrossOrigin(origins = "*")  // Apply CORS to this controller
+@CrossOrigin(origins = "https://girrajtechnology.com")  // Apply CORS to this controller
 
 @RestController
 @RequestMapping("/api")

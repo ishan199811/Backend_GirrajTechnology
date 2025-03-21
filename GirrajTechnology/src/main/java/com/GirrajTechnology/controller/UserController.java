@@ -17,7 +17,7 @@ import com.GirrajTechnology.service.serviceImpl.LoginService;
 
 import jakarta.validation.Valid;
 
-@CrossOrigin(origins = "*")  // Apply CORS to this controller
+@CrossOrigin(origins = "https://girrajtechnology.com")  // Apply CORS to this controller
 
 @RestController
 @RequestMapping("/api")
